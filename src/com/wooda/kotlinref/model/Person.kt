@@ -11,4 +11,6 @@ class Person(
         get() = if (gender == Gender.MALE) "Mr.$field" else field
     val age: Double
         get() = getAge(birthday)
+
+    override fun toString() = "I'm $name and $age years old"
 }
