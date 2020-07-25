@@ -1,4 +1,4 @@
-package com.wooda.kotlinref.util
+package com.wooda.kotlinref
 
 import com.wooda.kotlinref.model.Color
 import com.wooda.kotlinref.model.getMnemonic

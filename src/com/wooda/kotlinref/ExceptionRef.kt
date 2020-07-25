@@ -1,4 +1,4 @@
-package com.wooda.kotlinref.util
+package com.wooda.kotlinref
 
 import java.lang.Exception
 import java.lang.IllegalArgumentException

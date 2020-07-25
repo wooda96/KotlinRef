@@ -1,4 +1,4 @@
-package com.wooda.kotlinref.util
+package com.wooda.kotlinref
 
 import java.util.*
 
@@ -16,6 +16,10 @@ fun main(args: Array<String>) {
     val someList = arrayListOf("10", "11", "12")
     for ((index, element) in someList.withIndex())
         println("${index}th - $element")
+
+    val sampleMap = hashMapOf(1 to "one", 2 to "two", 3 to "three")
+    for ((num, expression) in sampleMap)
+        println("$num is $expression")
 }
 
 fun isLetter(ch: Char) = ch in 'A'..'Z' || ch in 'a'..'z'
