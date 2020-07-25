@@ -1,6 +1,7 @@
 package com.wooda.kotlinref.model
 
 import com.wooda.kotlinref.util.getAge
+import com.wooda.kotlinref.util.getCurrentDate
 import java.time.LocalDate
 
 class Person(
@@ -14,3 +15,5 @@ class Person(
 
     override fun toString() = "I'm $name and $age years old"
 }
+
+fun Person.toAgeByKoreanStyle() = getCurrentDate().year - birthday.year + 1
