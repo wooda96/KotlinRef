@@ -1,6 +1,5 @@
 package com.wooda.kotlinref
 
-import com.wooda.kotlinref.util.printCallerMethodName
 import java.util.*
 
 fun main(args: Array<String>) {

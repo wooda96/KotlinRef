@@ -4,8 +4,7 @@ fun main(args: Array<String>) {
     val sampleList = listOf(1, 3, 5, 10)
     println("default output of list: $sampleList")
 
-    val result = joinToString(
-            sampleList,
+    val result = sampleList.joinToString(
             separator = ":",
             prefix = "<",
             postFix = ">")
@@ -13,15 +12,14 @@ fun main(args: Array<String>) {
     println("output of joinToString: $result")
 }
 
-fun <T> joinToString(
-        collection: Collection<T>,
+fun <T> Collection<T>.joinToString(
         separator: String = ":",
         prefix: String = "<",
         postFix: String = ">"
 ): String {
     val result = StringBuilder(prefix)
 
-    for ((index, element) in collection.withIndex()) {
+    for ((index, element) in withIndex()) {
         if (index > 0) result.append(separator)
         result.append(element)
     }

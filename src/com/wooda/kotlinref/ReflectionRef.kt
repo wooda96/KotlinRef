@@ -1,4 +1,4 @@
-package com.wooda.kotlinref.util
+package com.wooda.kotlinref
 
 fun printCallerMethodName() {
     println("====== ${getCallerMethodName(1)} =======")

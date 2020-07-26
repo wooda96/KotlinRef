@@ -42,4 +42,12 @@ fun main(args: Array<String>) {
         if (num % 10 == 0)
             println()
     }
+    println()
+
+    val someText = "test.txt"
+    println("""c:\Program Files\$someText
+        |c:\Program Files\test2.txt
+        |c:\Program Files\test3.txt
+        |You can express $ and ${'$'}s
+    """.trimMargin())
 }
