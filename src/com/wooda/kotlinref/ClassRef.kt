@@ -8,6 +8,7 @@ import java.time.LocalDate
 fun main(args: Array<String>) {
 //    printCallerMethodName()
     classOverrideRef()
+    testCustomGetterSetter()
 }
 
 fun classBasicRef() {
@@ -28,6 +29,15 @@ fun classOverrideRef() {
     println("${v.getMyName()}")
 }
 
+fun testCustomGetterSetter() {
+    val user = SomeUser("wooda")
+    user.address = "New Address"
+    println("${user.address}")
+
+    // cannot set private setter
+//    user.familyCount = 10
+}
+
 open class View {
     open fun click() = println("View clicked.")
 }
@@ -39,3 +49,40 @@ class Button: View() {
 }
 
 fun Button.getMyName() = "I'm button"
+
+// constructors
+open class someView {
+    constructor(context: String) {
+        // some code
+    }
+
+    constructor(context:String, attribute: String) {
+        // some code
+    }
+}
+
+class someButton: someView {
+    constructor(context: String) : this(context, "") {
+
+    }
+
+    constructor(context: String, attribute: String): super(context, attribute) {
+
+    }
+}
+
+// custom getter and setter
+class SomeUser(val name: String) {
+    var address:String? = null
+    set (newVal: String?) {
+        println("$name value is changed")
+        field = newVal
+    }
+    get() {
+        println("return value of $name - $field")
+        return field
+    }
+
+    // change visibility
+    var familyCount: Int = 0
+}
